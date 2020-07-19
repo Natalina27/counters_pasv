@@ -2,8 +2,8 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    margin: 20px;
-    padding: 30px;
+    margin: 10px;
+    padding: 20px;
     border: gray 1px solid;
 }
 .count{

@@ -8,11 +8,11 @@ export const Counter = ({x}) => {
     const [count, setCount] = useState(0);
 
     const handleMinus = () => {
-        setCount(count - x);
+        setCount((prevValue)=>prevValue - x);
     }
 
     const handlePlus = () => {
-        setCount(count + x);
+        setCount((prevValue)=>prevValue + x);
     }
 
     return (

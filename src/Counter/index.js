@@ -22,6 +22,7 @@ export const Counter = ({x}) => {
                 {count}
             </div>
             <button className={s.btn} onClick={handlePlus}>+{x}</button>
+            <button className={s.reset} onClick={()=>setCount(0)}>RESET</button>
         </div>
     );
 };

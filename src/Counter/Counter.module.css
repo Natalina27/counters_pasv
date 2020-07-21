@@ -26,3 +26,34 @@
     padding: 10px;
     margin: 10px;
 }
+
+@media (min-width: 320px) and (max-width:1024px)  {
+    .counter{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 5px;
+        padding: 10px;
+        border: gray 1px solid;
+    }
+    .count{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 5px;
+        font-size: 30px;
+    }
+    .btn{
+        height: 50px;
+        width: 50px;
+        font-size: 20px;
+        padding: 5px;
+    }
+    .reset{
+        height: 50px;
+        width: 100px;
+        font-size: 20px;
+        padding: 5px;
+        margin: 5px;
+    }
+}

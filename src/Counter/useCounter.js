@@ -1,23 +1,21 @@
 import  {useState} from "react";
+import {_decrease} from "./_decrease";
+import {_increase} from "./_increase";
+import {_reset} from "./_reset";
 
 export const useCounter =(x)=>{
+    console.log('x', x);
+
 
     const [count, setCount] = useState(0);
 
-    const handleMinus = () => {
-        setCount((count)=>count - x);
-    }
+    const handleMinus = () => setCount(_decrease(count,x));
 
-    const handlePlus = () => {
-        setCount((count)=>count + x);
-    }
+    const handlePlus = () => setCount(_increase(count,x));
 
-    const handleReset = () => {
-        setCount(0);
-    }
+    const handleReset = () => setCount(_reset)
 
     return {
-        x,
         count,
         handlePlus,
         handleMinus,

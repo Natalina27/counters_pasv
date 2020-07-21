@@ -7,6 +7,7 @@ import s from './Counter.module.css';
 export const Counter = ({x}) => {
 
 const { count,  handleMinus, handlePlus, handleReset } = useCounter(x);
+console.log('count', count);
 
     return (
         <div className={s.counter}>

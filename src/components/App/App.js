@@ -3,8 +3,8 @@ import {Counter} from "../Counter";
 
 import s from './App.module.css';
 
-
 export function App() {
+
     return (
         <div className={s.wrap}>
             <Counter x={1}/>

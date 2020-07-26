@@ -35,7 +35,7 @@ export function App() {
         <div className={s.wrap}>
             {counterList.map((el,i )=>(
                 <Counter
-                    key={uuid()}
+                    key={el.id}
                     id={el.id}
                     counter={el.count}
                     index={i}

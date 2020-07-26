@@ -6,3 +6,17 @@
   padding: 10px;
   border: black 1px solid;
 }
+.countBtn{
+  display: flex;
+  flex-direction: row;
+  width: 120px;
+  justify-content: space-between;
+}
+.addCounter{
+  height: 50px;
+  width: 400px;
+  font-size: 20px;
+  padding: 5px;
+  margin: 5px;
+}
+

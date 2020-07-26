@@ -1,18 +1,28 @@
-import React from 'react';
-import { useCounter } from "./useCounter";
+import React, {useState} from 'react';
+import {CountBtn} from "../CountBtn";
 
 import s from './Counter.module.css';
 
 
-export const Counter = ({x}) => {
+export const Counter = ({deleteCounter, id, counter}) => {
 
-const { count,  handleMinus, handlePlus, handleReset } = useCounter(x);
-return (
+    const [count, setCount] = useState(counter);
+
+    const updateCount = (n) => setCount(count + n);
+
+    const reset = () => setCount(0);
+
+    return (
         <div className={s.counter}>
-            <button className={s.btn} onClick={handleMinus} >-{x}</button>
+            <CountBtn value={-3} count={count} updateCount={updateCount}/>
+            <CountBtn value={-2} count={count} updateCount={updateCount}/>
+            <CountBtn value={-1} count={count} updateCount={updateCount}/>
             <div className={s.count}>{count}</div>
-            <button className={s.btn} onClick={handlePlus}>+{x}</button>
-            <button className={s.reset} onClick={handleReset}>RESET</button>
+            <CountBtn value={1} count={count} updateCount={updateCount}/>
+            <CountBtn value={2} count={count} updateCount={updateCount}/>
+            <CountBtn value={3} count={count} updateCount={updateCount}/>
+            <button className={s.reset} onClick={reset}>RESET</button>
+            <button className={s.reset} onClick={()=>deleteCounter(id)}>DELETE</button>
         </div>
-    );
-};
+    )
+}

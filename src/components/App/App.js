@@ -9,13 +9,14 @@ import s from './App.module.css';
 export function App() {
 
     const initialState = [{id: 1, count: 1},{id:2, count: 2}];
-    const rand = +((Math.random()*10).toFixed());
+
 
     const [counterList, setCounterList] = useState(initialState);
     const [custom, setCustom]= useState(false);
 
 
     const addCounter = () => {
+        const rand = +((Math.random()*10).toFixed());
         const newList = [...counterList, {id:uuid(), count:rand}];
         setCounterList(newList);
     }
@@ -35,19 +36,18 @@ export function App() {
     }
     const addCustomCounter = () => {setCustom(!custom)}
 
-    const counterJSX = () => counterList.map((el,i )=>(
-        <Counter
-            key={el.id}
-            id={el.id}
-            counter={el.count}
-            index={i}
-            deleteCounter={deleteCounter}
-        />
-    ));
 
     return (
         <div className={s.wrap}>
-            {counterJSX()}
+            {counterList.map((el,i )=>(
+                <Counter
+                    key={el.id}
+                    id={el.id}
+                    counter={el.count}
+                    index={i}
+                    deleteCounter={deleteCounter}
+                />
+            ))}
             <button className={s.addCounter} onClick={addCounter}>ADD COUNTER</button>
             <button className={s.addCounter} onClick={resetAll}>RESET ALL</button>
             <button className={s.addCounter} onClick={addCustomCounter}>ADD CUSTOM COUNTER</button>

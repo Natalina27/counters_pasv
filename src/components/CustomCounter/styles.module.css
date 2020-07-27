@@ -1,3 +1,11 @@
 .custom{
     display: none;
 }
+.customCounter{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: black 1px solid;
+    margin: 5px;
+    padding: 5px;
+}

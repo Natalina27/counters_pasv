@@ -61,16 +61,19 @@ export const CustomCounter = ({custom}) => {
 
             return (
             <main className={style}>
-                <Counter positiveRange={positiveRange}
-                         negativeRange={negativeRange}
-                         onButtonClick={onButtonClick}
-                         onChangeMinRange={onChangeMinRange}
-                         onChangeMaxRange={onChangeMaxRange}
-                         onReset={onReset}
-                         minRange={minRange}
-                         maxRange={maxRange}
-                         resultNumb={resultNumb}
-                />
+                <div className={s.customCounter}>
+                    <Counter positiveRange={positiveRange}
+                             negativeRange={negativeRange}
+                             onButtonClick={onButtonClick}
+                             onChangeMinRange={onChangeMinRange}
+                             onChangeMaxRange={onChangeMaxRange}
+                             onReset={onReset}
+                             minRange={minRange}
+                             maxRange={maxRange}
+                             resultNumb={resultNumb}
+                    />
+                </div>
+
             </main>
             );
 };

@@ -18,8 +18,12 @@ export const CustomCounter = ({custom}) => {
 
             const createPositiveRange =  (from, to) => {
             const range = [];
-            for(let i = from; i <= to; i++ ){
-            range.push(i);
+            for(let i = from; i <= to ; i++ ){
+                if ( from >=0 && to <=10) {
+                    range.push(i);
+                }else{
+                    range.push();
+                }
         }
             return range;
         };
@@ -27,14 +31,19 @@ export const CustomCounter = ({custom}) => {
             const createNegativeRange =  (from, to) => {
             const range = [];
             for(let i = to; i >= from; i-- ){
-            range.push(i);
+                if ( from >=0 && to <=10) {
+                    range.push(i);
+                }else {
+                    range.push();
+                }
+
         }
             return range;
         };
 
             const onChangeMinRange = (e) => {
             const from = +e.target.value;
-            setMinRange(from);
+            (from >= 0 && from < 10) ? setMinRange(from) : setMinRange(0);
             setNegativeRange(createNegativeRange(from, maxRange));
             setPositiveRange(createPositiveRange(from, maxRange));
 
@@ -42,7 +51,7 @@ export const CustomCounter = ({custom}) => {
 
             const onChangeMaxRange = (e) => {
             const to =  +e.target.value;
-            setMaxRange(to);
+            (to > 0 && to <= 10) ? setMaxRange(to) : setMaxRange(10);
             setNegativeRange(createNegativeRange(minRange, to));
             setPositiveRange(createPositiveRange(minRange, to));
         };

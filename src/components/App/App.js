@@ -10,7 +10,6 @@ export function App() {
 
     const initialState = [{id: 1, count: 1},{id:2, count: 2}];
 
-
     const [counterList, setCounterList] = useState(initialState);
     const [custom, setCustom]= useState(false);
 
@@ -19,7 +18,7 @@ export function App() {
         const rand = +((Math.random()*10).toFixed());
         const newList = [...counterList, {id:uuid(), count:rand}];
         setCounterList(newList);
-    }
+    };
     const deleteCounter = (id) => {
         const itemIndex = counterList.findIndex((el) => el.id === id);
 
@@ -28,20 +27,19 @@ export function App() {
             ...counterList.slice(itemIndex + 1),
         ];
         setCounterList(newList);
-    }
+    };
     const resetAll = () =>{
         const newList = [...counterList];
-        newList.map(el => el.count = 0);
+        newList.map(el => (el.count =0));
         setCounterList(newList);
-    }
+    };
     const addCustomCounter = () => {setCustom(!custom)}
-
 
     return (
         <div className={s.wrap}>
             {counterList.map((el,i )=>(
                 <Counter
-                    key={el.id}
+                    key={uuid()}
                     id={el.id}
                     counter={el.count}
                     index={i}

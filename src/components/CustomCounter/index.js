@@ -1,5 +1,5 @@
 import React, {useState} from 'react';
-import {Counter} from "./Counter";
+import {CounterCust} from "./CounterCust";
 import clx from 'classnames';
 
 import s from './styles.module.css';
@@ -62,7 +62,7 @@ export const CustomCounter = ({custom}) => {
             return (
             <main className={style}>
                 <div className={s.customCounter}>
-                    <Counter positiveRange={positiveRange}
+                    <CounterCust positiveRange={positiveRange}
                              negativeRange={negativeRange}
                              onButtonClick={onButtonClick}
                              onChangeMinRange={onChangeMinRange}

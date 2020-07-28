@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "/counters_pasv/static/css/main.d0da12e1.chunk.css",
-    "main.js": "/counters_pasv/static/js/main.4d04bc4c.chunk.js",
-    "main.js.map": "/counters_pasv/static/js/main.4d04bc4c.chunk.js.map",
+    "main.js": "/counters_pasv/static/js/main.374b8a29.chunk.js",
+    "main.js.map": "/counters_pasv/static/js/main.374b8a29.chunk.js.map",
     "runtime-main.js": "/counters_pasv/static/js/runtime-main.4b9a4505.js",
     "runtime-main.js.map": "/counters_pasv/static/js/runtime-main.4b9a4505.js.map",
     "static/js/2.6d73dbf1.chunk.js": "/counters_pasv/static/js/2.6d73dbf1.chunk.js",
     "static/js/2.6d73dbf1.chunk.js.map": "/counters_pasv/static/js/2.6d73dbf1.chunk.js.map",
     "index.html": "/counters_pasv/index.html",
-    "precache-manifest.d238450d291798f4c6da878156a85040.js": "/counters_pasv/precache-manifest.d238450d291798f4c6da878156a85040.js",
+    "precache-manifest.0744a53666d68bc3bf99d915e8612a63.js": "/counters_pasv/precache-manifest.0744a53666d68bc3bf99d915e8612a63.js",
     "service-worker.js": "/counters_pasv/service-worker.js",
     "static/css/main.d0da12e1.chunk.css.map": "/counters_pasv/static/css/main.d0da12e1.chunk.css.map",
     "static/js/2.6d73dbf1.chunk.js.LICENSE.txt": "/counters_pasv/static/js/2.6d73dbf1.chunk.js.LICENSE.txt"
@@ -17,6 +17,6 @@
     "static/js/runtime-main.4b9a4505.js",
     "static/js/2.6d73dbf1.chunk.js",
     "static/css/main.d0da12e1.chunk.css",
-    "static/js/main.4d04bc4c.chunk.js"
+    "static/js/main.374b8a29.chunk.js"
   ]
 }

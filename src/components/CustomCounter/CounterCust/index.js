@@ -33,23 +33,25 @@ export const  CounterCust = ({
                 </div>
                 <div className={s.counter}>
                     <div>
-                        {negativeRange.map(el => <button key={-el}
-                                                         onClick={() => onButtonClick(-el)}
-                                                         >
+                        {negativeRange.map(el =>
+                            <button key={-el}
+                                    onClick={() => onButtonClick(-el)}
+
+                            >
                             {-el}
-                        </button>)}</div>
+                        </button>)}
+                    </div>
                     <span>{resultNumb}</span>
                     <div>
-                        {positiveRange.map(el => <button key={el}
-                                                         onClick={() => onButtonClick(el)}>
+                        {positiveRange.map(el =>
+                            <button key={el}
+                                    onClick={() => onButtonClick(el)}
+                            >
                             +{el}
                         </button>)}
                     </div>
                 </div>
             </div>
-            {/*<Reset key={345}*/}
-            {/*       onReset={onReset}*/}
-            {/*/>*/}
             <button onClick={() => onReset()}> RESET</button>
         </div>
     );

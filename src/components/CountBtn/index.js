@@ -3,7 +3,7 @@ import React from 'react';
 import s from './styles.module.css';
 
 
-export const CountBtn = ({value,updateCount, id }) => {
+export const CountBtn = ({value,updateCount, id}) => {
 
     const send = () => updateCount(value);
 

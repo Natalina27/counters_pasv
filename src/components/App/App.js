@@ -24,10 +24,18 @@ export function App() {
 
         const newList = [
             ...counterList.slice(0, itemIndex),
-            ...counterList.slice(itemIndex + 1),
+            ...counterList.slice(itemIndex + 1)
         ];
         setCounterList(newList);
     };
+    const reset = (id) => {
+        const itemIndex = counterList.findIndex((el) => el.id === id);
+        const newList = [
+            ...counterList.slice(0, itemIndex), {id, count: 0},
+            ...counterList.slice(itemIndex + 1)
+        ];
+        setCounterList(newList);
+    }
     const resetAll = () =>{
         const newList = [...counterList];
         newList.map(el => (el.count =0));
@@ -44,6 +52,7 @@ export function App() {
                     counter={el.count}
                     index={i}
                     deleteCounter={deleteCounter}
+                    reset={reset}
                 />
             ))}
             <button className={s.addCounter} onClick={addCounter}>ADD COUNTER</button>
